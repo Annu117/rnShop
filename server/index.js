@@ -8,7 +8,15 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 9000;
 const mongoose = require("mongoose");
 
-app.use(cors());
+// app.use(cors());
+app.use(cors(
+  {
+    origin: ["https://rn-shop-7inq.vercel.app"],
+    methods:["POST","GET"],
+    credentials: true
+  }
+));
+
 dotenv.config();
 
 // const products = require("./data/Products");
