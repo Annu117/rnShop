@@ -11,7 +11,7 @@ const mongoose = require("mongoose");
 // app.use(cors());
 app.use(cors(
   {
-    origin: ["https://rn-shop-7inq.vercel.app"],
+    origin: ["https://rn-shop.vercel.app/"],
     methods:["POST","GET"],
     credentials: true
   }
