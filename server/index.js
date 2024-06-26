@@ -11,7 +11,7 @@ const mongoose = require("mongoose");
 // app.use(cors());
 app.use(cors(
   {
-    origin: ["https://rnshop.onrender.com/"],
+    origin: [process.env.API],
     methods:["POST","GET"],
     credentials: true
   }
