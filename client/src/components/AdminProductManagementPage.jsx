@@ -1,4 +1,3 @@
-// client/src/components/AdminProductManagementPage.jsx
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -18,7 +17,6 @@ const AdminProductManagementPage = () => {
         },
       };
       const response = await axios.get('/api/products', config);
-      // const response = await axios.get('http://localhost:9000/addProduct', config);
 
       setProducts(response.data);
     } catch (error) {
@@ -27,7 +25,6 @@ const AdminProductManagementPage = () => {
   };
 
   const handleEditProduct = (productId) => {
-    // Implement logic to navigate to edit product page or show modal for editing
   };
 
   const handleDeleteProduct = async (productId) => {
@@ -39,7 +36,7 @@ const AdminProductManagementPage = () => {
         },
       };
       await axios.delete(`/api/products/${productId}`, config);
-      fetchProducts(); // Refresh products after deletion
+      fetchProducts(); 
     } catch (error) {
       console.error('Error deleting product:', error);
     }
